@@ -2,30 +2,6 @@
 
 A simple Django project that allows users to Create, Read, Update, and Delete (CRUD) books using Django's models, forms, views, and templates.
 
-## Project Structure
-
-crud_project/
-├── books/                  # The app containing book logic
-│   ├── migrations/
-│   ├── templates/
-│   │   └── books/
-│   │       ├── book_list.html
-│   │       ├── book_form.html
-│   │       └── book_confirm_delete.html
-│   ├── admin.py
-│   ├── apps.py
-│   ├── forms.py
-│   ├── models.py
-│   ├── views.py
-│   └── ...
-├── crud_project/           # Project settings and URLs
-│   ├── settings.py
-│   ├── urls.py
-│   └── ...
-├── db.sqlite3              # SQLite database
-├── manage.py               # Django command-line utility
-└── venv/ (optional)        # Virtual environment (not included in version control)
-
 ## How to Run This Project
 
 Follow these steps to run the project on any system.
