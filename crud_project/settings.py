@@ -29,7 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
-    "project-crud-vadzim-hulkovich-production.up.railway.app",
+    "https://project-crud-vadzim-hulkovich-production.up.railway.app",
 ]
 
 
