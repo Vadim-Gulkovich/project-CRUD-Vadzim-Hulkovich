@@ -6,6 +6,10 @@ class Book(models.Model):
     published_date = models.DateField()                 
     pages = models.PositiveIntegerField()               
     created_at = models.DateTimeField(auto_now_add=True)
+    price = models.IntegerField(null=True, blank=True) 
+    category = models.CharField(max_length=255, null=True, blank=True) 
+
+
 
     def __str__(self):
         return self.title
