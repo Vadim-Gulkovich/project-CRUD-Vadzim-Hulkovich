@@ -40,15 +40,19 @@ class BookAdd(View):
         author = data.get("author")
         published_date = data.get("published_date")
         pages = data.get("pages")
+        price = data.get("price")
+        category = data.get("category")
 
-        if not title or not author or not published_date or not pages:
-            return JsonResponse({"error": "Title, author, published_date and pages are required."}, status=400)
+        if not title or not author or not published_date or not pages or not category or not price:
+            return JsonResponse({"error": "Title, author, published_date, price, category and pages are required."}, status=400)
 
         book = Book.objects.create(
             title=title,
             author=author,
             published_date=published_date,
-            pages=pages
+            pages=pages,
+            price=price, 
+            category=category
         )
         return JsonResponse(model_to_dict(book), status=201)
 
@@ -64,6 +68,8 @@ class BookUpdate(View):
         book.author = data.get("author", book.author)
         book.published_date = data.get("published_date", book.published_date)
         book.pages = data.get("pages", book.pages)
+        book.price = data.get("price", book.price)
+        book.category = data.get("pagcategoryes", book.category)
         book.save()
 
         return JsonResponse(model_to_dict(book), status=200)
