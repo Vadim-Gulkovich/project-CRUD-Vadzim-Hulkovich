@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Список книг</title>
+</head>
+<body>
+    <h1>Книги</h1>
+    <div id="books"></div>
+
+    <script>
+    async function loadBooks() {
+        const res = await fetch('/api/books/');
+        const books = await res.json();
+        const html = books.map(b => `
+            <div>
+                <strong>${b.title}</strong> (${b.author})
+                <button onclick="editBook(${b.id})">Edit</button>
+                <button onclick="deleteBook(${b.id})">Delete</button>
+            </div>
+        `).join('');
+        document.getElementById('books').innerHTML = html;
+    }
+
+    async function deleteBook(id) {
+        await fetch(`/api/books/${id}/`, { method: 'DELETE' });
+        loadBooks();
+    }
+
+    function editBook(id) {
+        alert("Здесь можно реализовать редактирование книги " + id);
+    }
+
+    loadBooks();
+    </script>
+</body>
+</html>
