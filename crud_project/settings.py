@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "books",
     "rest_framework",
+    'authapp',
     "books_api"
+    
 ]
 
 # REST_FRAMEWORK = {
