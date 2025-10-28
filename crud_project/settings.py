@@ -26,7 +26,12 @@ SECRET_KEY = "django-insecure-s^k49-6_g+uwa@9@7j$1#hp0a46m=#^v&b^1_9)p0i8-g*k7t!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "project-crud-vadzim-hulkovich-production.up.railway.app",
+    "project-crud-vadzim-hulkovich-production-5a1a.up.railway.app",
+    "localhost",
+    "127.0.0.1",
+]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://project-crud-vadzim-hulkovich-production.up.railway.app",
