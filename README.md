@@ -101,6 +101,3 @@ db.sqlite3
 
 This project is open-source and free to use for learning and development purposes.
 
-## Author
-
-Your Name — https://github.com/your-username
