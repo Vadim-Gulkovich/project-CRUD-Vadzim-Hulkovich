@@ -38,6 +38,17 @@ CSRF_TRUSTED_ORIGINS = [
     "https://project-crud-vadzim-hulkovich-production-5a1a.up.railway.app",
 ]
 
+# --- CSRF / Security setup for Railway ---
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+# Сообщает Django, что Railway использует HTTPS-прокси
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Настройки совместимости cookie
+CSRF_COOKIE_SAMESITE = "Lax"
+SESSION_COOKIE_SAMESITE = "Lax"
+
 
 # Application definition
 
