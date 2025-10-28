@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://project-crud-vadzim-hulkovich-production.up.railway.app",
+    "https://project-crud-vadzim-hulkovich-production-5a1a.up.railway.app",
 ]
 
 
